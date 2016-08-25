@@ -55,7 +55,7 @@ $(document).ready(function() {
      if(diceRoll > 1) {
       playerTwo.turnTotal += diceRoll;
       $('#output2 .diceroll').text("Roll: " + diceRoll);
-      $('#output2 .total').text(playerTwo.turnTotal+ playerTwo.score));
+      $('#output2 .total').text(playerTwo.turnTotal + playerTwo.score);
       return;
     } else if (diceRoll === 1) {
       playerTwo.turnTotal = 0;
