@@ -26,7 +26,7 @@ $(document).ready(function() {
      if(diceRoll > 1) {
       playerOne.turnTotal += diceRoll;
       $('#output1 .diceroll').text("Roll: " + diceRoll);
-      $('#output1 .total').text(playerOne.turnTotal);
+      $('#output1 .total').text(playerOne.turnTotal + playerOne.score);
       return;
     } else if (diceRoll === 1) {
       playerOne.turnTotal = 0;
@@ -42,7 +42,6 @@ $(document).ready(function() {
     playerOne.addScore(playerOne.turnTotal);
     holdScoreOne.splice(0, 1, playerOne.score);
     $('#output1 .total').text(playerOne.score);
-    // alert(holdScoreOne);
     $(".player2 button").prop('disabled', false);
     $(".player1 button").prop('disabled', true);
     $(".turn2").hide();
@@ -56,7 +55,7 @@ $(document).ready(function() {
      if(diceRoll > 1) {
       playerTwo.turnTotal += diceRoll;
       $('#output2 .diceroll').text("Roll: " + diceRoll);
-      $('#output2 .total').text(playerTwo.turnTotal);
+      $('#output2 .total').text(playerTwo.turnTotal+ playerTwo.score));
       return;
     } else if (diceRoll === 1) {
       playerTwo.turnTotal = 0;
